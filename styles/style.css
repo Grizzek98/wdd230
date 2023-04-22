@@ -1,0 +1,66 @@
+body {
+    margin: 0 auto;
+    max-width: 1200px;
+    font-size: 22px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgba(48, 50, 53, 0.5);
+    margin-top: 2em;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
+header img {
+    width: 15em;
+    margin-top: 2em;
+    margin-left: 5em;
+    margin-bottom: 2em;
+    grid-column: 1/1;
+    grid-row: 2/2;
+    box-shadow: 5px 5px 10px #6f7364;
+    border: 10px solid #494850
+} 
+
+header h1 {
+    grid-column: 2/2;
+    grid-row: 2/2;
+    text-align: center;
+    padding: 2em;
+    margin-right: 2em;
+    white-space: nowrap;
+    color: white;
+    text-shadow: 2px 2px rgb(54, 53, 53);
+    font-size: 50px;
+    font-family: "Bodoni MT", "Lucida Bright", Georgia, Garamond;
+}
+
+footer {
+    background-color: rgba(48, 50, 53, 0.5);
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
+footer div {
+    padding: 0.5em 0em 0.5em 0em;
+}
+
+footer p {
+    text-align: center;
+    color: white
+}
+
+main {
+    padding: 1em 2em 1em 2em;
+}
+
+main h2 {
+    text-shadow: 5px 5px 10px #6f7364;
+}
+
+ul li {
+    font-size: 22px;
+    font-family: Helvetica
+}
