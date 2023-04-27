@@ -1,0 +1,29 @@
+@media only screen and (max-width: 32.5em) {
+    header {
+        grid-template-columns: 1fr;
+        border-radius: 0px;
+    }
+
+    footer {
+        border-radius: 0px;
+    }
+
+    header img {
+        margin: auto;
+        padding: 0em;
+        width: 10em;
+        display: block;
+    }
+
+    header h1 {
+        grid-column: 1/1;
+        grid-row: 3/3;
+        padding: 0em;
+        margin: auto;
+        font-size: 30px;
+    }
+
+    main h2 {
+        font-size: 25px;
+    }
+}
