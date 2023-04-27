@@ -1,0 +1,76 @@
+body {
+    margin: 0 auto;
+    font-size: 22px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(48, 50, 53, 0.5);
+}
+
+header h1, h2 {
+    color: white;
+    font-family: "Bodoni MT", "Lucida Bright", Georgia, Garamond;
+    text-align: center;
+    margin: 0.2em;
+}
+
+header h2 {
+    font-size: 25px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1;
+}
+
+main div {
+    background-color: ghostwhite;
+    border-top-right-radius: 22px;
+    border-top-left-radius: 22px;
+    border: 2px solid rgba(48, 50, 53, 0.5);
+    margin: 1em;
+
+}
+
+main div h3 {
+    background-color: rgba(48, 50, 53, 0.5);
+    color: white;
+    margin: 0;
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+    padding-left: 10px;
+    padding-top: 5px;
+    margin-bottom: 0.2em;
+}
+
+main div p {
+    margin: 0;
+    padding: 0.5em;
+}
+
+main div p a {
+    font-size: 18px;
+}
+
+main div img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: rgba(48, 50, 53, 0.5);
+}
+
+footer div {
+    padding: 0.5em 0em 0.5em 0em;
+}
+
+footer p {
+    text-align: center;
+    color: white
+}
