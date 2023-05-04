@@ -9,7 +9,6 @@ header {
     flex-direction: column;
     margin: auto;
     justify-content: center;
-    align-items: left;
     background-color: rgba(52, 122, 175, 1);
 }
 
