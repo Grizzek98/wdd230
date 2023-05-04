@@ -14,7 +14,7 @@ header {
 
 header h1, h2 {
     color: white;
-    font-family: "Bodoni MT", "Lucida Bright", Georgia, Garamond;
+    font-family: "Lucida Bright", Georgia, Garamond;
     text-align: center;
     margin: 0.2em;
 }
@@ -51,10 +51,12 @@ main div h3 {
 main div p {
     margin: 0;
     padding: 0.5em;
+    font-family: 'Open Sans', sans-serif;
 }
 
 main div p a {
     font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 main div img {
