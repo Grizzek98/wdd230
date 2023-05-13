@@ -1,0 +1,100 @@
+@media only screen and (min-width: 56em) {
+    /* header */
+    nav {
+        margin-left: auto;
+    }
+    .second-header p {
+        margin-right: 3em;
+        margin-left: auto;
+    }
+    .navigation {
+        display: flex;
+    }
+    .navigation li:first-child {
+        display: none;
+    }
+    .navigation li {
+        display: block;
+        flex: 1;
+        margin: 1px;
+        padding: 5px;
+        border: 2px solid rgba(52, 122, 175, 1);
+        border-radius: 10px;
+    }
+    .spacer {
+        flex: 2;
+    }
+
+    /* main */
+    main {
+        /* flex-flow: column wrap; */
+        /* flex-wrap: wrap; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0.5em 0.5em;
+        
+    }
+    .hero, .event, .weather, .news, .spotlight, .join {
+        margin: 0em;
+        padding: 1em;
+        padding-bottom: 25%;
+        width: auto;
+    }
+
+    .event {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+    .weather {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        margin-left: 1em;
+    }
+    .join {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        margin-left: 1em;
+        margin-bottom: 0.5em;
+    }
+    .hero {
+        grid-column: 2/4;
+        grid-row: 1/3;
+        margin-top: 1em;
+    }
+    .news {
+        grid-column: 2/4;
+        grid-row: 3/4;
+        margin-bottom: 0.5em;
+    }
+    .spotlight {
+        flex-direction: column;
+        grid-column: 4/5;
+        grid-row: 1/5;
+        margin-bottom: 1em;
+        margin-top: 1em;
+        margin-right: 1em;
+        padding: 1em;
+    }
+    .spotlight-1, .spotlight-2, .spotlight-3 {
+        padding: 1em;
+        padding-bottom: 4em;
+        margin: 0em;
+        margin-bottom: 1em;
+        flex: 1 1 100%
+    }
+    .spotlight-3 {
+        display: block;
+        margin-bottom: 0em;
+    }
+
+    /* footer */
+    .footer-bottom {
+        margin-bottom: 1em;
+    }
+    #last-modified {
+        margin-bottom: 0em;
+    }
+}

@@ -1,0 +1,70 @@
+@media only screen and (min-width: 38em) {
+    /* header */
+    nav {
+        margin-left: auto;
+    }
+    .spacer {
+        flex: 1;
+    }
+    .navigation li {
+        margin: 4px;
+        padding: 5px;
+    }
+    .navigation li a {
+        background-color: rgba(52, 122, 175, 1);
+        border-radius: 10px;
+    }
+    .navigation li a:hover {
+        background-color: white;
+        border-radius: 10px;
+        color: rgba(52, 122, 175, 1);
+    }
+
+    /* main */
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .hero, .news, .spotlight, .join {
+        width: 100%;
+    }
+    .spotlight {
+        margin-bottom: 0em;
+        flex-direction: row;
+    }
+    .spotlight-1, .spotlight-2 {
+        flex: 1 1 100%;
+        margin-bottom: 1em;
+    }
+    .spotlight-2 {
+        margin-left: 0em;
+    }
+    .join {
+        display: block;
+    }
+    .event {
+        order: 1;
+        flex: 50%;
+        margin-bottom: 1em;
+    }
+    .weather {
+        order: 1;
+        flex: 25%;
+        margin-left: 0em;
+        margin-bottom: 1em;
+    }
+
+    /* footer */
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 80%;
+    }
+    #copyright, #name, #project {
+        flex-basis: initial;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        border-right: 1px solid white;
+    }
+}

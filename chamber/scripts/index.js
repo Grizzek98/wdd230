@@ -1,21 +1,20 @@
-function myFunction() {
-    var x = document.querySelector("#navbar-links");
-    if (x.style.display === "block") {
-        satisfies.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
+function toggleMenu() {
+    document
+        .getElementsByClassName('navigation')[0]
+        .classList.toggle('responsive')
 }
 
-// const datebox = document.querySelector("#current-date");
 const date = new Date();
+let copyrightYear = date.getFullYear();
 
 const fulldateUK = new Intl.DateTimeFormat("en-UK", {
 	dateStyle: "full"
-}).format(now);
+}).format(date);
 
-document.querySelector("#date").innerHTML = `<em>${fulldateUK}</em>`;
-document.querySelector("#date").innerHTML = "poop";
+const copyrightYearTemplate = `&copy${copyrightYear} Lidekonia Chamber`;
+const lastModified = `Last Modification: ${document.lastModified}`;
 
-// datebox.innerHTML = "hwllo"
+document.querySelector("#date").innerHTML = `${fulldateUK}`;
+document.querySelector("#copyright").innerHTML = copyrightYearTemplate;
+document.querySelector("#last-modified").innerHTML = lastModified;
 
