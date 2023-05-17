@@ -8,15 +8,19 @@ body {
 header {
     margin: 0 auto;
     background-color: rgba(52, 122, 175, 1);
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 1fr;
+    /* flex-direction: column; */
 }
-header div {
+.logo-title {
+    grid-column: 1/2;
+    grid-row: 1/2;
     display: flex;
-    flex-direction: row;
-    /* align-self: center; */
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
 }
-header div img {
+header img {
     width: 3em;
     height: 2.5em;
     padding: 1em;
@@ -40,6 +44,11 @@ header div img {
 }
 
 /* social media buttons */
+.social-media {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    margin: 1.5em 2em 0em auto;
+}
 .fa-brands {
     padding-top: 5px;
     width: 30px;
@@ -48,8 +57,6 @@ header div img {
     text-align: center;
     text-decoration: none;
     border-radius: 30%;
-    margin: 1em;
-    margin-left: 0em;
 }
 .fa-facebook-f {
     background: white;
@@ -62,8 +69,9 @@ header div img {
 
 /* navbar */
 nav {
-    flex-grow: 1;
-    margin-left: auto;
+    grid-column: 1/4;
+    grid-row: 3/8;
+    /* margin-left: auto; */
 }
 .navigation {
     list-style: none;
@@ -72,7 +80,6 @@ nav {
 }
 .navigation li:first-child {
     display: block;
-    margin: 1px;
     padding: 5px;
 }
 .navigation li:first-child a {
@@ -96,7 +103,7 @@ nav {
 }
 .responsive li {
     display: block;
-    margin: 4px;
+    margin: 10px;
     padding: 5px;
 }
 .responsive li a {
@@ -108,9 +115,6 @@ nav {
     border-radius: 10px;
     color: rgba(52, 122, 175, 1);
 }
-.spacer {
-    flex: 1;
-}
 
 /* second header block */
 .second-header {
@@ -120,19 +124,17 @@ nav {
 
 /* current date */
 #date {
+    grid-column: 1/4;
+    grid-row: 2/3;
     text-align: center;
     padding: 0.5em;
-    padding-left: 2em;
-    padding-right: 2em;
+    margin: 0.5em;
     color: black;
-    /* background-color: white; */
     align-self: center;
     font-size: 15px;
     border-radius: 10px;
     font-family: 'Source Sans Pro', sans-serif;
     color: white;
-    margin-left: auto;
-    margin-right: 3em;
     border: 2px solid white;
     border-radius: 10px;
 }
