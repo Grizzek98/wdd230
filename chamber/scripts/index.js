@@ -18,3 +18,11 @@ document.querySelector("#date").innerHTML = `${fulldateUK}`;
 document.querySelector("#copyright").innerHTML = copyrightYearTemplate;
 document.querySelector("#last-modified").innerHTML = lastModified;
 
+console.log(date.getDay());
+
+const currentDay = date.getDay();
+
+if (currentDay == 1 || currentDay == 2) {
+    document.querySelector('.banner').style.display = "block";
+    console.log("hello world")
+}
