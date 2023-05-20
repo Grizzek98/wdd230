@@ -31,6 +31,7 @@
     }
     .spotlight {
         margin-bottom: 0em;
+        display: flex;
         flex-direction: row;
     }
     .spotlight-1, .spotlight-2 {
@@ -42,17 +43,34 @@
     }
     .join {
         display: block;
+        text-align: center;
+    }
+    .join a {
+        text-decoration: none;
+    }
+    .join p {
+        padding: 10px 1em;
+    }
+    .join a p {
+        background-color: #F1E2BD;
+        margin: 10px 4em;
+        border-radius: 15px;
+        box-shadow: 10px 5px 5px black;
+        border: 1px solid black;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 25px;
     }
     .event {
         order: 1;
-        flex: 50%;
-        margin-bottom: 1em;
+        flex: 52%;
+        margin: 1em 1em;
     }
     .weather {
         order: 1;
-        flex: 25%;
+        flex: 26%;
         margin-left: 0em;
         margin-bottom: 1em;
+        margin-right: 1em;
     }
 
     /* footer */
