@@ -55,6 +55,9 @@
         margin-left: 1em;
         margin-bottom: 0.5em;
     }
+    .join a p {
+        margin: 10px 1em;
+    }
     .hero {
         grid-column: 2/4;
         grid-row: 1/3;
@@ -79,7 +82,7 @@
         padding: 1em;
     }
     .spotlight-1, .spotlight-2, .spotlight-3 {
-        padding: 1em;
+        /* padding: 1em; */
         padding-bottom: 4em;
         margin: 0em;
         margin-bottom: 1em;
