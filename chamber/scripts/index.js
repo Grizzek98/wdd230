@@ -18,7 +18,7 @@ document.querySelector("#date").innerHTML = `${fulldateUK}`;
 document.querySelector("#copyright").innerHTML = copyrightYearTemplate;
 document.querySelector("#last-modified").innerHTML = lastModified;
 
-console.log(date.getDay());
+// console.log(date.getDay());
 
 const currentDay = date.getDay();
 

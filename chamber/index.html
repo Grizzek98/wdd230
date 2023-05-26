@@ -20,7 +20,7 @@
             <p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m</p>
         </div>
         <div class="logo-title">
-            <img src="images/logo.png" alt="Logo">
+            <img src="images/logo.webp" alt="Logo">
             <div class="title">
                 <h1>Lidekonia</h1>
                 <h2>Chamber of Commerce</h2>
@@ -48,7 +48,12 @@
     
     <main>
         <div class="hero">
-            <img src="images/hero.jpg" alt="rolling hills">
+            <!-- <img src="images/hero.jpg" alt="rolling hills"> -->
+            <picture>
+                <source srcset="images/wdd230-org-400.jpg" media="(min-width: 500px) and (max-width: 799px)">
+                <source srcset="images/wdd230-org-600.jpg" media="(min-width: 800px)">
+                <img src="images/wdd230-org-250.jpg" alt="rolling hills">
+            </picture>
             <h4>Welcome to Lidekonia!</h4>
             <div>
                 <a href="#"><p>Join the Chamber</p></a>
@@ -64,7 +69,19 @@
         </div>
         <div class="weather">
             <h4>Weather</h4>
-            <p>Ut sem arcu, porttitor ac efficitur ac, mollis id purus. Curabitur augue justo, vestibulum eu augue nec, ultrices maximus magna. Sed malesuada lacinia placerat. </p>
+            <p class="temp">
+                <span>49</span>
+                &degF
+            </p>
+            <p class="windspeed">
+                Wind Speed:
+                <span>4</span>
+                mph
+            </p>
+            <p class="windchill">
+                Wind Chill:
+                <span>0</span>
+            </p>
         </div>
         <div class="news">
             <h4>News Release</h4>
@@ -88,7 +105,7 @@
             </div>
             <div class="spotlight-3">
                 <h4>Build A Treefort</h4>
-                <img src="images/treefort.png" alt="tree fort">
+                <img src="images/treefort.jpg" alt="tree fort">
                 <p class="spot-quote"><em>Design your own treefort and we'll ship it directly to you, tree included!</em></p>
                 <p class="spot-email">builda@treefort.com</p>
                 <p class="spot-contact">(123) 456-7890 | Website</p>
@@ -101,7 +118,7 @@
     </main>
     
 <footer>
-        <img src="images/logo.png" alt="Logo">
+        <img src="images/logo.webp" alt="Logo">
         <h3>Lidekonia Chamber of Commerce</h3>
         <h4><em>123 Light St</em></h4>
         <h4><em>Lidekonia, Wyoconsin</em></h4>
@@ -119,6 +136,7 @@
             <h5 id="last-modified">Last Modification: [DO ME]</h5>
         </div>
     </footer>
+    <script src="scripts/windchill.js"></script>
     <script src="scripts/index.js"></script>
 </body>
 </html>
