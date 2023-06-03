@@ -26,3 +26,53 @@ if (currentDay == 1 || currentDay == 2) {
     document.querySelector('.banner').style.display = "block";
     console.log("hello world")
 }
+
+const images = document.querySelectorAll("[data-src]");
+
+function preloadImage(img) {
+    const src = img.getAttribute("data-src");
+    if(!src) {
+        return;
+    }
+    img.src = src;
+    img.onload = () => {
+        img.removeAttribute("data-src");
+    };
+}
+
+const imgOptions = {};
+
+const imgObserver = new IntersectionObserver((entries, imgObserver) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            preloadImage(entry.target);
+            imgObserver.unobserve(entry.target);
+        }
+    })
+}, imgOptions);
+
+images.forEach(image => {
+    imgObserver.observe(image);
+});
+
+
+const currentFull = new Date();
+const currentVisit = new Date(`${currentFull.getUTCMonth()}/${currentFull.getUTCDate()}/${currentFull.getUTCFullYear()}`);
+localStorage.lastVisit = localStorage.currentVisit;
+localStorage.currentVisit = currentVisit;
+
+function getDaysSinceLastVisit() {
+    return currentVisit.getTime() - new Date(localStorage.lastVisit).getTime()
+}
+
+const daysSinceVisitElement = document.querySelector(".demographics p span")
+if (localStorage.lastVisit == undefined) {
+    localStorage.lastVisit = new Date();
+    daysSinceVisitElement.innerHTML = "This is your first time visiting this webpage!"
+} else {
+    daysSinceVisitElement.innerHTML = `It has been ${getDaysSinceLastVisit()} days since you last visited this webpage.`
+}
+
+// console.log(currentVisit.getTime() - new Date(localStorage.lastVisit).getTime());

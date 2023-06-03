@@ -23,6 +23,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 2em 5em 3em 1fr;
+    /* margin-bottom: 0.5em; */
 }
 .logo-title {
     grid-column: 1/2;
@@ -203,7 +204,7 @@ main {
     text-align: center;
     margin-top: 0em;
 }
-.event h4, .news h4, .weather h4, .spotlight-1 h4, .spotlight-2 h4, .spotlight-3 h4 {
+.event h4, .news h4, .weather h4, .spotlight-1 h4, .spotlight-2 h4, .spotlight-3 h4, .demographics h4 {
     margin: 0;
     font-size: 30px;
     padding: 8px 0px;
@@ -212,12 +213,12 @@ main {
     background-color: rgba(52, 122, 175, 1);
     border-radius: 12px 12px 0px 0px;
 }
-.event h5, .news h5 {
+.event h5, .news h5, .demographics h5 {
     font-size: 20px;
     margin: 0.5em 1em 1em 1em;
     border-bottom: 2px solid black;
 }
-.event p, .news p {
+.event p, .news p, .demographics p {
     /* font-size: 18px; */
     padding: 0em 1em 1em 1em;
 }
@@ -278,6 +279,46 @@ p {
     margin: 1em 0.5em 0em 0.5em;
     padding: 0em 0em 1em 0em;
     border-bottom: 2px solid black;
+}
+
+/* demographics & picture */
+.demographics {
+    background-color: #C9F0FF;
+    padding: 0em;
+    margin: 1em 1em 0.5em 1em;
+    text-align: center;
+}
+.demographics {
+    border: 2px solid black;
+    border-radius: 15px;
+    
+}
+#gallery-title {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin: 2em 1em 0.5em 1em;
+    border-bottom: 2px solid black;
+}
+.city-highlight {
+    position: relative;
+    margin: 0.5em 1em;
+}
+.city-highlight img {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+.city-highlight p {
+    position: absolute;
+    bottom: -5px;
+    left: 10px;
+    background-color: #F1E2BD;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    padding: 0.5em;
+    border-radius: 15px;
+    box-shadow: 10px 5px 5px black;
 }
 
 /* footer */

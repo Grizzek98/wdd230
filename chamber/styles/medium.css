@@ -26,7 +26,7 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .hero, .news, .spotlight, .join {
+    .hero, .news, .spotlight, .join, .gallery, #gallery-title {
         width: 100%;
     }
     .spotlight {
@@ -71,6 +71,13 @@
         margin-left: 0em;
         margin-bottom: 1em;
         margin-right: 1em;
+    }
+
+    .city-highlight {
+        transition: transform .2s;
+    }
+    .city-highlight:hover {
+        transform: scale(1.04);
     }
 
     /* footer */
