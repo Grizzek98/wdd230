@@ -1,0 +1,54 @@
+div {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    /* max-width: 30em; */
+    margin: 0 auto;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.test, .headers td {
+    background-color: rgb(9, 34, 82);
+    color: white;
+    font-family: "Source Sans Pro";
+    font-size: 25px;
+    padding: 0.5em 1em;
+}
+
+.headers th {
+    background-color: rgb(17, 57, 110);
+    color: white;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 20px;
+    padding: 0.5em 1em;
+}
+
+.innertable {
+    border: 1px solid #c7c7c7;
+    font-family: "Open Sans", sans-serif;
+}
+
+.innertable th, .check, .x {
+    font-size: 18px;
+    padding: 0.5em 1em;
+}
+.check {
+    color: rgb(75, 96, 136);
+}
+
+.x {
+    color: red;
+}
+
+p {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
