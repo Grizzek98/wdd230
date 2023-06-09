@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the Join page for the Lidekonia Chamber of Commerce website.">
+    <title>Join | Lidekonia Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="icon" href="../favicon.ico">
+    <script src="https://kit.fontawesome.com/d2ac70f6f8.js" crossorigin="anonymous"></script>    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">     
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m</p>
+        </div>
+        <div class="logo-title">
+            <img src="images/logo.webp" alt="Logo">
+            <div class="title">
+                <h1>Lidekonia</h1>
+                <h2>Chamber of Commerce</h2>
+            </div>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com" class="icon facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com" class="icon linkedin">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+        <p id="date">template</p>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="joinmain">
+        <div class="membership">
+            <h1>Membership Benefits</h1>
+            <h2>Non-Profit Membership</h2>
+            <p>No membership fee. Includes free advertising on Home Page Spotlight, and discounted access to training courses at $30* each.</p>
+            <h2>Bronze Membership</h2>
+            <p>$25 monthly membership fee. Home Page Spotlight advertising offered at $30 for two weeks, training courses offered $90* each.</p>
+            <h2>Silver Membership</h2>
+            <p>$50 monthly membership fee. Includes one free two-week Home Page Spotlight advertisement (terms apply**), then offered at $10 for two weeks, training courses offered at $75* each.</p>
+            <h2>Gold Membership</h2>
+            <p>$75 monthly membership fee. Includes free advertising on Home Page Spotlight, and discounted access to training courses at $30* each.</p>
+            <p class="ast"><em>*Training courses are a one-time payment, but several respective courses are offered, each costing the same amount.</em></p>
+            <p class="ast"><em>**<a href="#">Click here</a> to learn more.</em></p>
+        </div>
+        <form method="get" action="thankyou.html">
+            <h1>Join Community Form</h1>
+            <fieldset>
+                <legend>Basic Information</legend>
+                <label class="top">First Name*<input type="text" name="fname" required></label>
+                <label class="top">Last Name*<input type="text" name="lname" required></label>
+                <label class="top">Email*<input type="email" name="email" placeholder="example@email.com" required></label>
+                <label class="top">Cell Phone Number*<input type="tel" name="phone" required></label>
+            </fieldset>
+            <fieldset>
+                <legend>Business Information</legend>
+                <label class="top">Business Position<input type="text" name="buspos" pattern="[A-Za-z0-9\s-]{7,}"></label>
+                <label class="top">Business Name*<input type="text" name="busname" required></label>
+                <div>Membership Level</div>
+                <label class="sbs"><input type="radio" name="membership" value="np" required> NP Membership</label>
+                <label class="sbs"><input type="radio" name="membership" value="bronze"> Bronze Membership</label>
+                <label class="sbs"><input type="radio" name="membership" value="silver"> Silver Membership</label>
+                <label class="sbs"><input type="radio" name="membership" value="gold"> Gold Membership</label>
+                <label class="top">Business Description<textarea name="busdesc" value="gold"></textarea></label>
+            </fieldset>
+            <input id="time" type="hidden" name="time" value="currenttime">
+            <input class="submitBtn" type="submit" value="Join Our Community">
+        </form>
+    </main>
+    <footer>
+        <img src="images/logo.webp" alt="Logo">
+        <h3>Lidekonia Chamber of Commerce</h3>
+        <h4><em>123 Light St</em></h4>
+        <h4><em>Lidekonia, Wyoconsin</em></h4>
+        <br>
+        <h5>info@lidekoniacc.org</h5>
+        <br>
+        <h5>(123) 456 7890</h5>
+        <br>
+        <h5><a href="https://goo.gl/maps/nGbDuagVaPjw6p647">Map Location</a></h5>
+        <hr>
+        <div class="footer-bottom">
+            <h5 id="copyright">[copyright year] Lidekonia Chamber</h5>
+            <h5 id="name">Benjamin Anderson</h5>
+            <h5 id="project">WDD 230 Project</h5>
+            <h5 id="last-modified">Last Modification: [DO ME]</h5>
+        </div>
+    </footer>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

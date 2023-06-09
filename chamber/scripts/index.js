@@ -68,7 +68,7 @@ function getDaysSinceLastVisit() {
 }
 
 const daysSinceVisitElement = document.querySelector(".demographics p span")
-if (localStorage.lastVisit == undefined) {
+if (localStorage.lastVisit == NaN) {
     localStorage.lastVisit = new Date();
     daysSinceVisitElement.innerHTML = "This is your first time visiting this webpage!"
 } else {
@@ -76,3 +76,8 @@ if (localStorage.lastVisit == undefined) {
 }
 
 // console.log(currentVisit.getTime() - new Date(localStorage.lastVisit).getTime());
+
+// ----------- JOIN PAGE -------------
+
+const currentTimeElement = document.querySelector("#time");
+currentTimeElement.value = Date.now();

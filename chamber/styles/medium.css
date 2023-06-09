@@ -80,6 +80,16 @@
         transform: scale(1.04);
     }
 
+    /* form */
+    form {
+        width: 100%;
+    }
+
+    /* thank you */
+    .thanksmain h1 {
+        width: 100%;
+    }
+
     /* footer */
     .footer-bottom {
         flex-direction: row;
