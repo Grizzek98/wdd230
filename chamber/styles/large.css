@@ -151,6 +151,19 @@
         grid-template-rows: 1fr;
     }
 
+    /* directory */
+    .directorymain {
+        grid-template-rows: 1fr;
+    }
+    .directorymain div {
+        grid-column: 1/5;
+    }
+    .listingcards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
     /* footer */
     .footer-bottom {
         margin-bottom: 1em;

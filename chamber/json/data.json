@@ -1,0 +1,76 @@
+{
+    "listings": [
+        {
+            "name": "Adipiscing Ltd.",
+            "address": "56 Velit St, Lidekonia, 47658",
+            "phone": "456-8436",
+            "website": "https://adipiscing.co",
+            "image": "./images/adipiscing.png",
+            "membership": "Bronze Membership"
+        },
+        {
+            "name": "Labore Quis",
+            "address": "86 Dolor St, Lidekonia, 47658",
+            "phone": "456-4845",
+            "website": "https://laborequis.np",
+            "image": "./images/laborequis.png",
+            "membership": "Non-Profit Membership"
+        },
+        {
+            "name": "Consectetur LLC",
+            "address": "490 Vitae Ave, Lidekonia, 47658",
+            "phone": "456-3486",
+            "website": "https://consectetur.co",
+            "image": "./images/consectetur.png",
+            "membership": "Gold Membership"
+        },
+        {
+            "name": "Nec Sodales",
+            "address": "84 Suspendisse St, Lidekonia, 47658",
+            "phone": "456-9385",
+            "website": "https://necsodales.co",
+            "image": "./images/necsodales.png",
+            "membership": "Silver Membership"
+        },
+        {
+            "name": "Morbi Vestibulum LLC",
+            "address": "174 Cursus Blvd, Lidekonia, 47658",
+            "phone": "456-9376",
+            "website": "https://morbivestibulum.co",
+            "image": "./images/morbivestibulum.png",
+            "membership": "Gold Membership"
+        },
+        {
+            "name": "Purus Gravida",
+            "address": "87 Dolor St, Lidekonia, 47658",
+            "phone": "456-0385",
+            "website": "https://purusgravida.co",
+            "image": "./images/purusgravida.png",
+            "membership": "Bronze Membership"
+        },
+        {
+            "name": "Nulla",
+            "address": "378 dictum St, Lidekonia, 47658",
+            "phone": "456-4297",
+            "website": "https://nulla.co",
+            "image": "./images/nulla.png",
+            "membership": "Non-Profit Membership"
+        },
+        {
+            "name": "Condimentum Ltd",
+            "address": "37 Velit St, Lidekonia, 47658",
+            "phone": "456-0358",
+            "website": "https://condimentum.co",
+            "image": "./images/condimentum.png",
+            "membership": "Silver Membership"
+        },
+        {
+            "name": "Tincidunt Lobortis",
+            "address": "74 Dolor St, Lidekonia, 47658",
+            "phone": "456-2083",
+            "website": "https://tinciduntlobortis.co",
+            "image": "./images/tinciduntlobortis.png",
+            "membership": "Gold Membership"
+        }
+    ]
+}

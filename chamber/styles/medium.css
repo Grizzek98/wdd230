@@ -90,6 +90,13 @@
         width: 100%;
     }
 
+    /* directory */
+    .listingcards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
     /* footer */
     .footer-bottom {
         flex-direction: row;
