@@ -444,7 +444,7 @@ form label.top input:invalid {
 /* --------- DIRECTORY PAGE ----------- */
 .listingcards {
     display: grid;
-    grid-template-columns: repeat(autofit, minmax(400px, 1fr));
+    grid-template-columns: 1fr;
 }
 
 .directorymain section {
