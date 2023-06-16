@@ -5,7 +5,7 @@
             "address": "56 Velit St, Lidekonia, 47658",
             "phone": "456-8436",
             "website": "https://adipiscing.co",
-            "image": "./images/adipiscing.png",
+            "image": "./images/adipiscing.jpg",
             "membership": "Bronze Membership"
         },
         {
@@ -13,7 +13,7 @@
             "address": "86 Dolor St, Lidekonia, 47658",
             "phone": "456-4845",
             "website": "https://laborequis.np",
-            "image": "./images/laborequis.png",
+            "image": "./images/laborequis.jpg",
             "membership": "Non-Profit Membership"
         },
         {
@@ -21,7 +21,7 @@
             "address": "490 Vitae Ave, Lidekonia, 47658",
             "phone": "456-3486",
             "website": "https://consectetur.co",
-            "image": "./images/consectetur.png",
+            "image": "./images/consectetur.jpg",
             "membership": "Gold Membership"
         },
         {
@@ -29,7 +29,7 @@
             "address": "84 Suspendisse St, Lidekonia, 47658",
             "phone": "456-9385",
             "website": "https://necsodales.co",
-            "image": "./images/necsodales.png",
+            "image": "./images/necsodales.jpg",
             "membership": "Silver Membership"
         },
         {
@@ -37,7 +37,7 @@
             "address": "174 Cursus Blvd, Lidekonia, 47658",
             "phone": "456-9376",
             "website": "https://morbivestibulum.co",
-            "image": "./images/morbivestibulum.png",
+            "image": "./images/morbivestibulum.jpg",
             "membership": "Gold Membership"
         },
         {
@@ -45,7 +45,7 @@
             "address": "87 Dolor St, Lidekonia, 47658",
             "phone": "456-0385",
             "website": "https://purusgravida.co",
-            "image": "./images/purusgravida.png",
+            "image": "./images/purusgravida.jpg",
             "membership": "Bronze Membership"
         },
         {
@@ -53,7 +53,7 @@
             "address": "378 dictum St, Lidekonia, 47658",
             "phone": "456-4297",
             "website": "https://nulla.np",
-            "image": "./images/nulla.png",
+            "image": "./images/nulla.jpg",
             "membership": "Non-Profit Membership"
         },
         {
@@ -61,7 +61,7 @@
             "address": "37 Velit St, Lidekonia, 47658",
             "phone": "456-0358",
             "website": "https://condimentum.co",
-            "image": "./images/condimentum.png",
+            "image": "./images/condimentum.jpg",
             "membership": "Silver Membership"
         },
         {
@@ -69,7 +69,7 @@
             "address": "74 Dolor St, Lidekonia, 47658",
             "phone": "456-2083",
             "website": "https://tinciduntlobortis.co",
-            "image": "./images/tinciduntlobortis.png",
+            "image": "./images/tinciduntlobortis.jpg",
             "membership": "Gold Membership"
         }
     ]
