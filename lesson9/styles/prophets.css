@@ -1,0 +1,42 @@
+body {
+    margin: 0 auto;
+    text-align: center;
+    background-color: black;
+}
+
+h1, h2 {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+h1 {
+    color: white;
+    padding-bottom: 1rem;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    margin: 0 1rem;
+
+}
+section {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding-bottom: 0.5rem;
+}
+
+section img {
+    max-width: 200px;
+    height: auto;
+    box-shadow: 10px 5px 5px black;
+}
