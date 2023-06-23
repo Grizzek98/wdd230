@@ -35,7 +35,7 @@ if (window.location.href.indexOf('') > -1) {
     const weatherIcon = document.querySelector('#weather-icon');
     const captionDesc = document.querySelector('figcaption');
 
-    const url = 'http://api.openweathermap.org/data/2.5/weather?q=Carraroe&appid=82b3ab783ff7c95236b8cdc47074b9c8&units=imperial';
+    const url = 'https://api.openweathermap.org/data/2.5/weather?q=Carraroe&appid=82b3ab783ff7c95236b8cdc47074b9c8&units=imperial';
 
     async function apiFetch() {
         try {
