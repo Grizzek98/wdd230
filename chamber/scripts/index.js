@@ -31,6 +31,7 @@ if (currentDay == 1 || currentDay == 2) {
 
 if (window.location.href.indexOf('') > -1) {
     const currentTemp = document.querySelector('.temp span');
+    const currentWind = document.querySelector('.windspeed span');
     const weatherIcon = document.querySelector('#weather-icon');
     const captionDesc = document.querySelector('figcaption');
 
@@ -55,6 +56,7 @@ if (window.location.href.indexOf('') > -1) {
 
     function displayWeather(weatherData) {
         currentTemp.innerHTML = `${weatherData.main.temp.toFixed(0)}`;
+        currentWind.innerHTML = `${weatherData.wind.speed.toFixed(1)}`;
 
         const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
         const desc = weatherData.weather[0].description;
