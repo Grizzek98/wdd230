@@ -1,7 +1,7 @@
 const temp = document.querySelector(".temp span").innerHTML
 const windSpeed = document.querySelector(".windspeed span").innerHTML
-console.log(temp)
-console.log(windSpeed)
+// console.log(temp)
+// console.log(windSpeed)
 
 const tempNum = Number(temp)
 const windSpeedNum = Number(windSpeed)

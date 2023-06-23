@@ -27,6 +27,44 @@ if (currentDay == 1 || currentDay == 2) {
     console.log("hello world")
 }
 
+// ------- HOME PAGE --------
+
+if (window.location.href.indexOf('') > -1) {
+    const currentTemp = document.querySelector('.temp span');
+    const weatherIcon = document.querySelector('#weather-icon');
+    const captionDesc = document.querySelector('figcaption');
+
+    const url = 'http://api.openweathermap.org/data/2.5/weather?q=Carraroe&appid=82b3ab783ff7c95236b8cdc47074b9c8&units=imperial';
+
+    async function apiFetch() {
+        try {
+          const response = await fetch(url);
+          if (response.ok) {
+            const data = await response.json();
+            console.log(data); // this is for testing the call
+            displayWeather(data);
+            } else {
+              throw Error(await response.text());
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    apiFetch();
+
+    function displayWeather(weatherData) {
+        currentTemp.innerHTML = `${weatherData.main.temp.toFixed(0)}`;
+
+        const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
+        const desc = weatherData.weather[0].description;
+
+        weatherIcon.setAttribute('src', iconsrc);
+        weatherIcon.setAttribute('alt', desc);
+        captionDesc.textContent = desc;
+    }
+}
+    
 // ------- DISCOVER PAGE ---------
 
 if (window.location.href.indexOf('discover.html') > -1) {

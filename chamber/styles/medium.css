@@ -116,11 +116,16 @@
         justify-content: center;
         flex-wrap: wrap;
         width: 80%;
+        margin-bottom: 1em;
     }
-    #copyright, #name, #project {
+    #copyright, #name, #project, #last-modified {
         flex-basis: initial;
         padding-left: 0.5em;
         padding-right: 0.5em;
         border-right: 1px solid white;
+    }
+    #weather-data {
+        margin-bottom: 0;
+        padding-left: 0.5em;
     }
 }
