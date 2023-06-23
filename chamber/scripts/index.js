@@ -90,16 +90,30 @@ if (window.location.href.indexOf('join.html') > -1) {
 // ----------- DIRECTORY PAGE -------------
 
 if (window.location.href.indexOf('directory.html') > -1) {
+    const cardBtn = document.querySelector('#cardBtn');
+    const listBtn = document.querySelector('#listBtn');
+
+    cardBtn.addEventListener('click', function() {
+        document.querySelector('.table').style.display = "none";
+        document.querySelector('.listingcards').style.display = "grid";
+    })
+    listBtn.addEventListener('click', function() {
+        document.querySelector('.table').style.display = "grid";
+        document.querySelector('.listingcards').style.display = "none";
+    })
+
     async function getListingsData() {
         const response = await fetch('./json/data.json');
         const data = await response.json();
         // console.table(data.listings);
-        displayListings(data.listings);
+        generateCards(data.listings);
+        generateTable(data.listings);
+        // displayListings(data.listings);
     }
     
     getListingsData();
 
-    const displayListings = (listings) => {
+    const generateCards = (listings) => {
         const cards = document.querySelector('div.listingcards');
 
         listings.forEach((listing) => {
@@ -108,7 +122,7 @@ if (window.location.href.indexOf('directory.html') > -1) {
             let name = document.createElement('h2');
             let address = document.createElement('p');
             let phone = document.createElement('p');
-            let website = document.createElement('p');
+            let website = document.createElement('a');
             let membership = document.createElement('p');
 
             image.setAttribute('src', listing.image);
@@ -121,8 +135,10 @@ if (window.location.href.indexOf('directory.html') > -1) {
             address.textContent = listing.address;
             phone.textContent = listing.phone;
             website.textContent = listing.website;
+            website.href = listing.website;
             membership.textContent = listing.membership;
 
+            card.className = 'card';
             card.appendChild(image);
             card.appendChild(name);
             card.appendChild(address);
@@ -133,4 +149,35 @@ if (window.location.href.indexOf('directory.html') > -1) {
             cards.appendChild(card);
         });
     };
+
+    const generateTable = (listings) => {
+        const table = document.querySelector('tbody')
+
+        listings.forEach((listing) => {
+            let tr = document.createElement('tr');
+            let name = document.createElement('p');
+            let address = document.createElement('p');
+            let phone = document.createElement('p');
+            let website = document.createElement('a');
+            let membership = document.createElement('p');
+
+            name.textContent = listing.name;
+            address.textContent = listing.address;
+            phone.textContent = listing.phone;
+            website.textContent = listing.website;
+            website.href = listing.website;
+            membership.textContent = listing.membership;
+
+            tr.className = 'tableRow';
+            tr.appendChild(document.createElement('td')).appendChild(name);
+            tr.appendChild(document.createElement('td')).appendChild(address);
+            tr.appendChild(document.createElement('td')).appendChild(phone);
+            tr.appendChild(document.createElement('td')).appendChild(website);
+            tr.appendChild(document.createElement('td')).appendChild(membership);
+
+            table.appendChild(tr);
+        });
+    };
+
+    
 }; 

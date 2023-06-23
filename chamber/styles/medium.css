@@ -96,6 +96,19 @@
         grid-template-columns: 1fr 1fr;
         width: 100%;
     }
+    .displayBtn {
+        display: inline-flex;
+    }
+    table {
+        text-align: center;
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 2rem;
+    }
+    tr:nth-child(odd), tr:nth-child(odd) a {
+        background-color: rgba(52, 122, 175, 1);
+        color: white;
+    }
 
     /* footer */
     .footer-bottom {

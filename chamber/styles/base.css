@@ -446,19 +446,34 @@ form label.top input:invalid {
     display: grid;
     grid-template-columns: 1fr;
 }
-
-.directorymain section {
+.card {
     background-color: white;
     margin: 1em;
     border: 2px solid black;
     border-radius: 15px;
 }
-
+.table {
+    display: none;
+}
 .directorymain img {
     max-width: 100px;
     height: auto;
     margin-top: 1em;
 }
+.displayBtn {
+    background: none;
+    outline: none;
+    padding: 0.75rem;
+    background-color: white;
+    display: none;
+}
+.fa-list, .fa-table-cells {
+    color: rgba(52, 122, 175, 1);
+    background: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
 /* footer */
 footer {
     background-color: rgba(52, 122, 175, 1);
