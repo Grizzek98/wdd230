@@ -84,6 +84,9 @@
     form {
         width: 100%;
     }
+    .contactmain h1, .contactdiv {
+        width: 100%;
+    }
 
     /* thank you */
     .thanksmain h1 {

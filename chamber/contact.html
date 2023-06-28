@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is the Directory page for the Lidekonia Chamber of Commerce website.">
-    <title>Directory | Lidekonia Chamber of Commerce</title>
+    <meta name="description" content="This is the Join page for the Lidekonia Chamber of Commerce website.">
+    <title>Join | Lidekonia Chamber of Commerce</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
@@ -46,26 +46,37 @@
             </ul>
         </nav>
     </header>
-    <main class="directorymain">
-        <div>
-            <h1>Community Directory</h1>
-            <p>Here you can find each member of our Lidekonia Chamber of Commerce and their associated info, helping to bring 
-                our community closer.</p>
-            <button type="button" class="displayBtn" id="cardBtn" name="cardBtn">
-                <i class="fa-solid fa-table-cells"></i>
-            </button>
-            <button type="button" class="displayBtn" id="listBtn" name="listBtn">
-                <i class="fa-solid fa-list"></i>
-            </button>
+    <main class="contactmain">
+        <h1>Reach Out to Us!</h1>
+        <div class="contactdiv">
+            <h2>Come Visit</h2>
+            <p>Lidekonia Chamber of Commerce</p>
+            <p>123 Light St, Lidekonia, Wyoconsin, 47658</p>
+            <p>Monday - Friday: 8am to 3pm</p>
         </div>
-        <div class="listingcards"></div>
-        <div class="table">
-            <table>
-                <tbody>
-
-                </tbody>
-            </table>
+        <div class="contactdiv">
+            <h2>General Contact</h2>
+            <p>General Inquiries: 456-1000</p>
+            <p>Non-Profit Opportunities: 456-1001</p>
+            <p>Member Inquiries: 456-1002</p>
         </div>
+        <div class="contactdiv">
+            <h2>Specific Contact</h2>
+            <p>Jared Hull, Marketing Specialist: 456-1003</p>
+            <p>Damon McLean, Organization Specialist: 456-1004</p>
+            <p>Shantel Belloni, Bookkeeping: 456-1005</p>
+            <p>Tanja Joseph, Membership Specialist: 456-1006</p>
+        </div>
+        <form class="contactform" method="get" action="thankyouemail.html">
+            <h2>Questions or Concerns?</h2>
+            <label class="top">Name*<input type="text" name="name" required></label>
+            <label class="top">Phone<input type="tel" name="phone"></label>
+            <label class="top">Email*<input type="email" name="email" required></label>
+            <label class="top">Questions/Comments<textarea name="commentarea"></textarea></label>
+            <input id="time" type="hidden" name="time" value="currenttime">
+            <input class="contactsubmitBtn" type="submit" value="Send Inquiry">
+        </form>
+        </main>
     </main>
     <footer>
         <img src="images/logo.webp" alt="Logo">
