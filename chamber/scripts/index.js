@@ -34,6 +34,8 @@ if (window.location.href.indexOf('') > -1) {
     const currentWind = document.querySelector('.windspeed span');
     const weatherIcon = document.querySelector('#weather-icon');
     const captionDesc = document.querySelector('figcaption');
+    const tempNum = Number(currentTemp)
+    const windSpeedNum = Number(currentWind)
 
     const url = 'https://api.openweathermap.org/data/2.5/weather?q=Carraroe&appid=82b3ab783ff7c95236b8cdc47074b9c8&units=imperial';
 
@@ -64,7 +66,13 @@ if (window.location.href.indexOf('') > -1) {
         weatherIcon.setAttribute('src', iconsrc);
         weatherIcon.setAttribute('alt', desc);
         captionDesc.textContent = desc;
-    }
+
+        if (temp <= 50 && windSpeed > 3) {
+            document.querySelector(".windchill span").innerHTML = (35.74 + (0.6215 * tempNum) - (35.75 * (windSpeedNum ** 0.16)) + (0.4275 * tempNum * (windSpeedNum ** 0.16))).toFixed(1) + " &degF"
+        }
+        else {
+            document.querySelector(".windchill span").innerHTML = "N/A"
+        }    }
 }
     
 // ------- DISCOVER PAGE ---------
