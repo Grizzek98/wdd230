@@ -112,11 +112,11 @@ if (window.location.href.indexOf('index.html') > -1) {
         listings.forEach(business => {
             if (business.membership == "Gold Membership" || business.membership == "Silver Membership") {
                 membershipList.push(business);
-                console.log(membershipList);
+                // console.log(membershipList);
             }
         });
 
-        console.table(membershipList);
+        // console.table(membershipList);
 
         const spot1 = Math.floor(Math.random()*membershipList.length);
         spot1name.innerHTML = membershipList[spot1].name;
@@ -124,10 +124,10 @@ if (window.location.href.indexOf('index.html') > -1) {
         spot1quote.innerHTML = membershipList[spot1].quote;
         spot1address.innerHTML = membershipList[spot1].address;
         spot1contact.innerHTML = `${membershipList[spot1].phone}  ${membershipList[spot1].website}`;
-        console.log(spot1);
-        console.table(membershipList);
+        // console.log(spot1);
+        // console.table(membershipList);
         membershipList.splice(spot1, 1);
-        console.table(membershipList);
+        // console.table(membershipList);
         
         const spot2 = Math.floor(Math.random()*membershipList.length);
         spot2name.innerHTML = membershipList[spot2].name;
@@ -135,10 +135,10 @@ if (window.location.href.indexOf('index.html') > -1) {
         spot2quote.innerHTML = membershipList[spot2].quote;
         spot2address.innerHTML = membershipList[spot2].address;
         spot2contact.innerHTML = `${membershipList[spot2].phone}  ${membershipList[spot2].website}`;
-        console.log(spot2);
-        console.table(membershipList);
+        // console.log(spot2);
+        // console.table(membershipList);
         membershipList.splice(spot2, 1);
-        console.table(membershipList);
+        // console.table(membershipList);
         
         const spot3 = Math.floor(Math.random()*membershipList.length);
         spot3name.innerHTML = membershipList[spot3].name;
@@ -146,10 +146,10 @@ if (window.location.href.indexOf('index.html') > -1) {
         spot3quote.innerHTML = membershipList[spot3].quote;
         spot3address.innerHTML = membershipList[spot3].address;
         spot3contact.innerHTML = `${membershipList[spot3].phone}  ${membershipList[spot3].website}`;
-        console.log(spot3);
-        console.table(membershipList);
+        // console.log(spot3);
+        // console.table(membershipList);
         membershipList.splice(spot3, 1);
-        console.table(membershipList);
+        // console.table(membershipList);
         }
 
 }
