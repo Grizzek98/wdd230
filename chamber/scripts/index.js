@@ -3,6 +3,7 @@ function toggleMenu() {
         .getElementsByClassName('navigation')[0]
         .classList.toggle('responsive')
 }
+console.log(window.location.href)
 
 const date = new Date();
 let copyrightYear = date.getFullYear();
@@ -24,12 +25,11 @@ const currentDay = date.getDay();
 
 if (currentDay == 1 || currentDay == 2) {
     document.querySelector('.banner').style.display = "block";
-    console.log("hello world")
 }
 
 // ------- HOME PAGE --------
 
-if (window.location.href.indexOf('') > -1) {
+if (window.location.href.indexOf('index.html') > -1) {
     const currentTemp = document.querySelector('.temp span');
     const currentWind = document.querySelector('.windspeed span');
     const weatherIcon = document.querySelector('#weather-icon');
@@ -112,21 +112,22 @@ if (window.location.href.indexOf('') > -1) {
         listings.forEach(business => {
             if (business.membership == "Gold Membership" || business.membership == "Silver Membership") {
                 membershipList.push(business);
+                console.log(membershipList);
             }
         });
 
-        // membershipList.forEach(business => {})
-        console.log(membershipList);
-        
+        console.table(membershipList);
+
         const spot1 = Math.floor(Math.random()*membershipList.length);
         spot1name.innerHTML = membershipList[spot1].name;
         spot1img.setAttribute('src', membershipList[spot1].image);
         spot1quote.innerHTML = membershipList[spot1].quote;
         spot1address.innerHTML = membershipList[spot1].address;
         spot1contact.innerHTML = `${membershipList[spot1].phone}  ${membershipList[spot1].website}`;
-        membershipList.splice(spot1, spot1);
-        console.log(spot1)
-        console.log(membershipList);
+        console.log(spot1);
+        console.table(membershipList);
+        membershipList.splice(spot1, 1);
+        console.table(membershipList);
         
         const spot2 = Math.floor(Math.random()*membershipList.length);
         spot2name.innerHTML = membershipList[spot2].name;
@@ -134,9 +135,10 @@ if (window.location.href.indexOf('') > -1) {
         spot2quote.innerHTML = membershipList[spot2].quote;
         spot2address.innerHTML = membershipList[spot2].address;
         spot2contact.innerHTML = `${membershipList[spot2].phone}  ${membershipList[spot2].website}`;
-        membershipList.splice(spot2, spot2);
-        console.log(spot2)
-        console.log(membershipList);
+        console.log(spot2);
+        console.table(membershipList);
+        membershipList.splice(spot2, 1);
+        console.table(membershipList);
         
         const spot3 = Math.floor(Math.random()*membershipList.length);
         spot3name.innerHTML = membershipList[spot3].name;
@@ -144,9 +146,10 @@ if (window.location.href.indexOf('') > -1) {
         spot3quote.innerHTML = membershipList[spot3].quote;
         spot3address.innerHTML = membershipList[spot3].address;
         spot3contact.innerHTML = `${membershipList[spot3].phone}  ${membershipList[spot3].website}`;
-        membershipList.splice(spot3, spot3);
-        console.log(spot3)
-        console.log(membershipList);
+        console.log(spot3);
+        console.table(membershipList);
+        membershipList.splice(spot3, 1);
+        console.table(membershipList);
         }
 
 }
@@ -229,7 +232,7 @@ if (window.location.href.indexOf('directory.html') > -1) {
     async function getListingsData() {
         const response = await fetch('./json/data.json');
         const data = await response.json();
-        console.log(data.listings);
+        // console.log(data.listings);
         generateCards(data.listings);
         generateTable(data.listings);
         // displayListings(data.listings);
