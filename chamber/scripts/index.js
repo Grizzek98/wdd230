@@ -3,7 +3,7 @@ function toggleMenu() {
         .getElementsByClassName('navigation')[0]
         .classList.toggle('responsive')
 }
-console.log(window.location.href)
+// console.log(window.location.href)
 
 const date = new Date();
 let copyrightYear = date.getFullYear();
