@@ -36,15 +36,30 @@ if (window.location.href.indexOf('') > -1) {
     const captionDesc = document.querySelector('figcaption');
     const tempNum = Number(currentTemp)
     const windSpeedNum = Number(currentWind)
-
     const url = 'https://api.openweathermap.org/data/2.5/weather?q=Carraroe&appid=82b3ab783ff7c95236b8cdc47074b9c8&units=imperial';
 
-    async function apiFetch() {
+    const spot1name = document.querySelector('.spotlight-1 h4');
+    const spot1img = document.querySelector('.spotlight-1 img');
+    const spot1quote = document.querySelector('.spotlight-1 .spot-quote');
+    const spot1address = document.querySelector('.spotlight-1 .spot-email');
+    const spot1contact = document.querySelector('.spotlight-1 .spot-contact');
+    const spot2name = document.querySelector('.spotlight-2 h4');
+    const spot2img = document.querySelector('.spotlight-2 img');
+    const spot2quote = document.querySelector('.spotlight-2 .spot-quote');
+    const spot2address = document.querySelector('.spotlight-2 .spot-email');
+    const spot2contact = document.querySelector('.spotlight-2 .spot-contact');
+    const spot3name = document.querySelector('.spotlight-3 h4');
+    const spot3img = document.querySelector('.spotlight-3 img');
+    const spot3quote = document.querySelector('.spotlight-3 .spot-quote');
+    const spot3address = document.querySelector('.spotlight-3 .spot-email');
+    const spot3contact = document.querySelector('.spotlight-3 .spot-contact');
+
+    async function weatherFetch() {
         try {
           const response = await fetch(url);
           if (response.ok) {
             const data = await response.json();
-            console.log(data); // this is for testing the call
+            // console.log(data); // this is for testing the call
             displayWeather(data);
             } else {
               throw Error(await response.text());
@@ -54,7 +69,23 @@ if (window.location.href.indexOf('') > -1) {
         }
     }
 
-    apiFetch();
+    async function spotlightFetch() {
+        try {
+            const response = await fetch('./json/data.json');
+            if (response.ok) {
+                const data = await response.json();
+                // console.log(data.listings);
+                displaySpotlight(data.listings);
+            } else {
+                throw Error(await response.text());
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    weatherFetch();
+    spotlightFetch();
 
     function displayWeather(weatherData) {
         currentTemp.innerHTML = `${weatherData.main.temp.toFixed(0)}`;
@@ -67,12 +98,57 @@ if (window.location.href.indexOf('') > -1) {
         weatherIcon.setAttribute('alt', desc);
         captionDesc.textContent = desc;
 
-        if (temp <= 50 && windSpeed > 3) {
+        if (tempNum <= 50 && windSpeedNum > 3) {
             document.querySelector(".windchill span").innerHTML = (35.74 + (0.6215 * tempNum) - (35.75 * (windSpeedNum ** 0.16)) + (0.4275 * tempNum * (windSpeedNum ** 0.16))).toFixed(1) + " &degF"
         }
         else {
             document.querySelector(".windchill span").innerHTML = "N/A"
-        }    }
+        }    
+    }
+
+    function displaySpotlight(listings) {
+        let membershipList = [];
+
+        listings.forEach(business => {
+            if (business.membership == "Gold Membership" || business.membership == "Silver Membership") {
+                membershipList.push(business);
+            }
+        });
+
+        // membershipList.forEach(business => {})
+        console.log(membershipList);
+        
+        const spot1 = Math.floor(Math.random()*membershipList.length);
+        spot1name.innerHTML = membershipList[spot1].name;
+        spot1img.setAttribute('src', membershipList[spot1].image);
+        spot1quote.innerHTML = membershipList[spot1].quote;
+        spot1address.innerHTML = membershipList[spot1].address;
+        spot1contact.innerHTML = `${membershipList[spot1].phone}  ${membershipList[spot1].website}`;
+        membershipList.splice(spot1, spot1);
+        console.log(spot1)
+        console.log(membershipList);
+        
+        const spot2 = Math.floor(Math.random()*membershipList.length);
+        spot2name.innerHTML = membershipList[spot2].name;
+        spot2img.setAttribute('src', membershipList[spot2].image);
+        spot2quote.innerHTML = membershipList[spot2].quote;
+        spot2address.innerHTML = membershipList[spot2].address;
+        spot2contact.innerHTML = `${membershipList[spot2].phone}  ${membershipList[spot2].website}`;
+        membershipList.splice(spot2, spot2);
+        console.log(spot2)
+        console.log(membershipList);
+        
+        const spot3 = Math.floor(Math.random()*membershipList.length);
+        spot3name.innerHTML = membershipList[spot3].name;
+        spot3img.setAttribute('src', membershipList[spot3].image);
+        spot3quote.innerHTML = membershipList[spot3].quote;
+        spot3address.innerHTML = membershipList[spot3].address;
+        spot3contact.innerHTML = `${membershipList[spot3].phone}  ${membershipList[spot3].website}`;
+        membershipList.splice(spot3, spot3);
+        console.log(spot3)
+        console.log(membershipList);
+        }
+
 }
     
 // ------- DISCOVER PAGE ---------
@@ -153,7 +229,7 @@ if (window.location.href.indexOf('directory.html') > -1) {
     async function getListingsData() {
         const response = await fetch('./json/data.json');
         const data = await response.json();
-        // console.table(data.listings);
+        console.log(data.listings);
         generateCards(data.listings);
         generateTable(data.listings);
         // displayListings(data.listings);

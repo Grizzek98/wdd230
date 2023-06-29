@@ -22,7 +22,8 @@
             "phone": "456-3486",
             "website": "https://consectetur.co",
             "image": "./images/consectetur.jpg",
-            "membership": "Gold Membership"
+            "membership": "Gold Membership",
+            "quote": "We definitely do important things!"
         },
         {
             "name": "Nec Sodales",
@@ -30,7 +31,8 @@
             "phone": "456-9385",
             "website": "https://necsodales.co",
             "image": "./images/necsodales.jpg",
-            "membership": "Silver Membership"
+            "membership": "Silver Membership",
+            "quote": "We do things so that you don't have to."
         },
         {
             "name": "Morbi Vestibulum LLC",
@@ -38,7 +40,8 @@
             "phone": "456-9376",
             "website": "https://morbivestibulum.co",
             "image": "./images/morbivestibulum.jpg",
-            "membership": "Gold Membership"
+            "membership": "Gold Membership",
+            "quote": "We put the 'E' in 'Empower'"
         },
         {
             "name": "Purus Gravida",
@@ -62,7 +65,8 @@
             "phone": "456-0358",
             "website": "https://condimentum.co",
             "image": "./images/condimentum.jpg",
-            "membership": "Silver Membership"
+            "membership": "Silver Membership",
+            "quote": "The check that smiles back"
         },
         {
             "name": "Tincidunt Lobortis",
@@ -70,7 +74,8 @@
             "phone": "456-2083",
             "website": "https://tinciduntlobortis.co",
             "image": "./images/tinciduntlobortis.jpg",
-            "membership": "Gold Membership"
+            "membership": "Gold Membership",
+            "quote": "Creating the future!"
         }
     ]
 }
