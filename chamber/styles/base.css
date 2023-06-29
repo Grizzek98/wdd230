@@ -475,6 +475,10 @@ form label.top input:invalid {
     margin: 1em;
     border: 2px solid black;
     border-radius: 15px;
+    padding-bottom: 1em;
+}
+.membershipElement {
+    display: none;
 }
 .table {
     display: none;

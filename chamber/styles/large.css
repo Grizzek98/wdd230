@@ -182,6 +182,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    .membershipElement {
+        display: inline;
+    }
 
 
     /* footer */

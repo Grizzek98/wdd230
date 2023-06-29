@@ -294,6 +294,7 @@ if (window.location.href.indexOf('directory.html') > -1) {
             website.textContent = listing.website;
             website.href = listing.website;
             membership.textContent = listing.membership;
+            membership.className = 'membershipElement';
 
             tr.className = 'tableRow';
             tr.appendChild(document.createElement('td')).appendChild(name);
