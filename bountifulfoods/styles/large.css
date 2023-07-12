@@ -1,0 +1,36 @@
+@media only screen and (min-width: 769px) {
+    h2 {
+        font-size: 35px;
+    }
+    p {
+        font-size: 25px;
+    }
+
+    /* ------ HEADER ------ */
+    nav {
+        grid-column: 1/4;
+        justify-self: center;
+    }
+    .navigation {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+    }
+    .navigation li {
+        display: inline-block;
+        padding: 10px;
+    }
+    .navigation li:first-child {
+        display: none;
+    }
+    .navigation li a:hover {
+        background-color: white;
+        color: #4E546A;
+        border-radius: 15px;
+    }
+
+    /* ------ HOME ------ */
+    .intro {
+        max-width: 1000px;
+    }
+}
