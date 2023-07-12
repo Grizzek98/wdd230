@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the homepage for the Bountiful Foods.">
+    <title>Home | Lidekonia Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="icon" href="../favicon.ico">
+    <script src="https://kit.fontawesome.com/d2ac70f6f8.js" crossorigin="anonymous"></script>    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">    
+</head>
+<body>
+    <header>
+        <img src="images/logofull.png" alt="Logo" id="logo-header">
+        <div class="social-media">
+            <a href="https://www.facebook.com" class="icon facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com" class="icon instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com" class="icon twitter">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fresh.html">Fresh</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="hero">
+            <img src="images/hero.jpg" alt="fresh produce">
+            <h1>Welcome to fresh</h1>
+        </div>
+        <div class="coastal-area-info">
+            <h2>We Care About Our Sources</h2>
+            <p class="intro">We think it's important to be able to know what you're putting into
+                your body. That's why we pay carefully select what farms we source
+                our produce from. We get our delicious organic food from dozens of
+                farms in the surrounding area, including from Agra, Pauma Valley,
+                Descanso, and Deluz. 
+            </p>
+            <p class="intro">
+                The Mediterranean-like climate of these Southern
+                California farms provides great growing conditions and growing seasons
+                to produce a large variety of produce, giving you many options to
+                choose from!
+            </p>
+        </div>
+        <div class="business-info">
+            <h2>Come Visit Our Storefront!</h2>
+            <div class="physical">
+                <div>
+                    <h3>Hours</h3>
+                    <p>Mon-Fri: 9am-7pm</p>
+                    <p>Sat: 8am-8pm</p>
+                </div>
+                <div>
+                    <h3>Address</h3>
+                    <p>123 Street Pl</p>
+                    <p>Carlsbad, California</p>
+                </div>
+            </div>
+            <div class="electronic">
+                <div>
+                    <h3>Phone</h3>
+                    <p>(123) 456-7890</p>
+                </div>
+                <div>
+                    <h3>Email</h3>
+                    <p>fresh@bfoods.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="weather">
+            <h2>Carlsbad Weather</h2>
+            <div class="weather-first">
+                <figure>
+                    <img src="temp" alt="" id="weather-icon">
+                    <!-- <figcaption></figcaption> -->
+                </figure>
+                <p class="temp">
+                    <span>49</span>&deg;F
+                </p>
+                <p class="condition-desc">
+                    <span>description</span>
+                </p>
+                <p class="humidity">
+                    Humidity:
+                    <span>0</span>
+                </p>
+            </div>
+            <div class="weather-second">
+                <div class="fc-1">
+                    <h3>day1</h3>
+                    <span>40</span>&deg;F
+                </div>
+                <div class="fc-2">
+                    <h3>day2</h3>
+                    <span>40</span>&deg;F
+                </div>
+                <div class="fc-3">
+                    <h3>day3</h3>
+                    <span>40</span>&deg;F
+                </div>
+            </div>
+        </div>
+        <div class="fresh-image">
+            <img src="images/fresh-home.jpg" alt="Fresh Drink Mix">
+        </div>
+        <div class="fresh-summary">
+            <h2>Fresh is Best</h2>
+            <p class="intro">We're trying our best to make fresh easier for you! Head
+                on over to our Fresh page to learn how to customize and
+                order your very own organic drink mixes.<br><br>
+                <a href="fresh.html">Start Mixing</a>
+            </p>
+            <!-- <p><a href="fresh.html">Start Mixing</a></p> -->
+        </div>
+        <div class="fresh-ordered">
+            <h3><span>No drinks mixed yet!</span></h3>
+        </div>
+    </main>
+    
+    <footer>
+        <img src="images/logo.png" alt="Logo">
+        <h3>Bountiful Foods</p>
+        <p class="copyright"><span></span> Bountiful Foods</p>
+        <p id="name">Benjamin Anderson</p>
+        <p id="project">WDD 230 Project</p>
+        <p id="last-modified">Last Modification: [DO ME]</p>
+        <p id="weather-data">Weather data by <a href="https://www.openweathermap.org">Open Weather Map</a></p>
+    </footer>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
