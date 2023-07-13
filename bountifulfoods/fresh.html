@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the homepage for the Bountiful Foods.">
+    <title>Home | Lidekonia Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="icon" href="../favicon.ico">
+    <script src="https://kit.fontawesome.com/d2ac70f6f8.js" crossorigin="anonymous"></script>    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">    
+</head>
+<body>
+    <header>
+        <img src="images/logofull.png" alt="Logo" id="logo-header">
+        <div class="social-media">
+            <a href="https://www.facebook.com" class="icon facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com" class="icon instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com" class="icon twitter">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fresh.html">Fresh</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="hero">
+            <img src="images/fresh-hero.jpg" alt="Fruit Mix Drink">
+        </div>
+        <div class="start-text">
+            <h2>Customize Your Health</h2>
+            <p class="intro">Here at Bountiful Foods, we believe in
+                inspiring others to take control of their food. Here
+                you can customize and order your very own unique 
+                specialty drink mixes. All ingredients are organic and
+                are fresh when used to create the mixes. All you need
+                to do is take control! And add water, of course.
+            </p>
+        </div>
+        <form method="get" action="#">
+            <h2>Let's Get Mixing</h2>
+            <fieldset>
+                <legend>How Do We Contact You?</legend>
+                <label class="top">First Name<input type="text" name="fname" required></label>
+                <label class="top">Email<input type="email" name="email" required></label>
+                <label class="top">Phone<input type="tel" name="phone" required></label>
+            
+            </fieldset>
+        </form>
+    </main>
+    
+    <footer>
+        <img src="images/logo.png" alt="Logo">
+        <h3>Bountiful Foods</p>
+        <p class="copyright"><span></span> Bountiful Foods</p>
+        <p id="name">Benjamin Anderson</p>
+        <p id="project">WDD 230 Project</p>
+        <p id="last-modified">Last Modification: [DO ME]</p>
+        <p id="weather-data">Weather data by <a href="https://www.openweathermap.org">Open Weather Map</a></p>
+    </footer>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
