@@ -48,16 +48,16 @@ images.forEach(image => {
 
 // ------ HOME ------
 
-if (window.location.hred.indexOf('') > -1){
+if (window.location.href.indexOf('') > -1){
     console.log('');
 };
-if (window.location.hred.indexOf('/') > -1){
+if (window.location.href.indexOf('/') > -1){
     console.log('/');
 };
-if (window.location.hred.indexOf('index.html') > -1){
+if (window.location.href.indexOf('index.html') > -1){
     console.log('index.html');
 };
-
+console.log(window.location.href)
 if (window.location.href.indexOf('/') > -1) {
     const temp = document.querySelector('.temp span');
     const condDesc = document.querySelector('.condition-desc span');
