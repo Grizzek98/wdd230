@@ -15,6 +15,37 @@ const modified = document.querySelector('#last-modified');
 copyright.innerHTML = `&copy${date.getFullYear()}`;
 modified.innerHTML = `Last Modified: ${document.lastModified}`;
 
+// ------ LAZY LOADING ------
+
+const images = document.querySelectorAll('[data-src]');
+const imgOptions = {};
+
+function preloadImage(img) {
+    const src = img.getAttribute("data-src");
+    if(!src) {
+        return;
+    }
+    img.src = src;
+    img.onload = () => {
+        img.removeAttribute("data-src");
+    };
+}
+
+const imgObserver = new IntersectionObserver((entries, imgObserver) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            preloadImage(entry.target);
+            imgObserver.unobserve(entry.target);
+        }
+    })
+}, imgOptions);
+
+images.forEach(image => {
+    imgObserver.observe(image);
+});
+
 // ------ HOME ------
 
 if (window.location.href.indexOf('index.html') > -1) {
@@ -103,7 +134,7 @@ if (window.location.href.indexOf('index.html') > -1) {
     if (localStorage.getItem('drinksMade') != null) {
         drinksMade.innerHTML = `You've mixed ${localStorage.getItem('drinksMade')} specialty drinks. Way to go!`;
     }
-    console.log(localStorage.getItem('drinksMade'));
+    // console.log(localStorage.getItem('drinksMade'));
 }
 
 // ------ FRESH ------
