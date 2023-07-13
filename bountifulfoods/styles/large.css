@@ -57,4 +57,11 @@
         max-width: 200px;
         justify-self: center;
     }
+
+    /* ------ ABOUT US ------ */
+
+    .map {
+        max-width: 770px;
+        height: 300px;
+    }
 }
