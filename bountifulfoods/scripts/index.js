@@ -48,16 +48,16 @@ images.forEach(image => {
 
 // ------ HOME ------
 
-if (window.location.href.indexOf('') > -1){
-    console.log('');
-};
-if (window.location.href.indexOf('/') > -1){
-    console.log('/');
-};
-if (window.location.href.indexOf('index.html') > -1){
-    console.log('index.html');
-};
-console.log(window.location.href)
+// if (window.location.href.indexOf('') > -1){
+//     console.log('');
+// };
+// if (window.location.href.indexOf('/') > -1){
+//     console.log('/');
+// };
+// if (window.location.href.indexOf('index.html') > -1){
+//     console.log('index.html');
+// };
+// console.log(window.location.href)
 if (window.location.href.indexOf('/') > -1) {
     const temp = document.querySelector('.temp span');
     const condDesc = document.querySelector('.condition-desc span');
@@ -74,7 +74,7 @@ if (window.location.href.indexOf('/') > -1) {
     const fc3Day = document.querySelector('.fc-3 h3');
     const fc3Span = document.querySelector('.fc-3 span');
 
-    const forecasturl = `http://api.openweathermap.org/data/2.5/forecast?lat=33.1581&lon=-117.3506&appid=82b3ab783ff7c95236b8cdc47074b9c8&units=imperial`;
+    const forecasturl = `https://api.openweathermap.org/data/2.5/forecast?lat=33.1581&lon=-117.3506&appid=82b3ab783ff7c95236b8cdc47074b9c8&units=imperial`;
 
     const drinksMade = document.querySelector('.fresh-ordered h3 span');
 
