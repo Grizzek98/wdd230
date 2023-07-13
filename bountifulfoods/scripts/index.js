@@ -48,7 +48,17 @@ images.forEach(image => {
 
 // ------ HOME ------
 
-if (window.location.href.indexOf('') > -1) {
+if (window.location.hred.indexOf('') > -1){
+    console.log('');
+};
+if (window.location.hred.indexOf('/') > -1){
+    console.log('/');
+};
+if (window.location.hred.indexOf('index.html') > -1){
+    console.log('index.html');
+};
+
+if (window.location.href.indexOf('/') > -1) {
     const temp = document.querySelector('.temp span');
     const condDesc = document.querySelector('.condition-desc span');
     const humidity = document.querySelector('.humidity span');
