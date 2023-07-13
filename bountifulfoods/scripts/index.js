@@ -35,6 +35,8 @@ if (window.location.href.indexOf('index.html') > -1) {
 
     const forecasturl = `http://api.openweathermap.org/data/2.5/forecast?lat=33.1581&lon=-117.3506&appid=82b3ab783ff7c95236b8cdc47074b9c8&units=imperial`;
 
+    const drinksMade = document.querySelector('.fresh-ordered h3 span');
+
     async function weatherFetch() {
         try {
             const response = await fetch(url);
@@ -97,4 +99,85 @@ if (window.location.href.indexOf('index.html') > -1) {
         const date = new Date(dateStr);
         return date.toLocaleDateString(locale, { weekday: 'long' });
     }
+
+    if (localStorage.getItem('drinksMade') != null) {
+        drinksMade.innerHTML = `You've mixed ${localStorage.getItem('drinksMade')} specialty drinks. Way to go!`;
+    }
+    console.log(localStorage.getItem('drinksMade'));
+}
+
+// ------ FRESH ------
+
+if (window.location.href.indexOf('fresh.html') > -1) {
+
+    let selects = document.querySelectorAll('select');
+
+    const url = `https://brotherblazzard.github.io/canvas-content/fruit.json`;
+    let jsonData = null
+
+    async function freshFetch() {
+        try {
+            const response = await fetch(url);
+            if (response.ok) {
+                const data = await response.json();
+                // console.log(data); // this is for testing the call
+                populateSelects(data);
+                jsonData = data;
+            } else {
+                throw Error(await response.text());
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    freshFetch();
+    
+    function populateSelects(data) {
+        selects.forEach(select => {
+            data.forEach(flavor => {
+                select.innerHTML = select.innerHTML + `<option value="${flavor.name}">${flavor.name}</option>`;
+                // console.log(flavor.name);
+            });
+        });
+    }
+    
+    document.querySelector('.submitBtn').addEventListener("click", function() {
+        document.querySelector('#fname-con').innerHTML = `First Name: ${document.querySelector('[name="fname"').value}`;
+        document.querySelector('#email-con').innerHTML = `Email: ${document.querySelector('[name="email"').value}`;
+        document.querySelector('#phone-con').innerHTML = `Phone: ${document.querySelector('[name="phone"').value}`;
+        document.querySelector('#time-con').innerHTML = `Order Date: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}`;
+        document.querySelector('#instr-con').innerHTML = `Special Instructions: ${document.querySelector('[name="spec-instr"').value}`;
+
+        let totalCarbs = 0;
+        let totalProtein = 0;
+        let totalFat = 0;
+        let totalSugar = 0;
+        let totalCals = 0;
+        
+        selects.forEach(select => {
+            const index = jsonData.findIndex(std=> std.name === select.value);
+            totalCarbs += jsonData[index].nutritions.carbohydrates;
+            totalProtein += jsonData[index].nutritions.protein;
+            totalFat += jsonData[index].nutritions.fat;
+            totalSugar += jsonData[index].nutritions.sugar;
+            totalCals += jsonData[index].nutritions.calories;
+            
+        })
+        document.querySelector('#carbs').innerHTML = `Carbohydrates: ${totalCarbs.toFixed(1)}`;
+        document.querySelector('#protein').innerHTML = `Carbohydrates: ${totalProtein.toFixed(1)}`;
+        document.querySelector('#fat').innerHTML = `Carbohydrates: ${totalFat.toFixed(1)}`;
+        document.querySelector('#sugar').innerHTML = `Carbohydrates: ${totalSugar.toFixed(1)}`;
+        document.querySelector('#cals').innerHTML = `Carbohydrates: ${totalCals.toFixed(1)}`;
+
+        document.querySelector('.form-result').style.display = 'grid';
+
+        let drinksMade = 0;
+        if (localStorage.getItem('drinksMade') != null) {
+            localStorage.setItem('drinksMade', +localStorage.getItem('drinksMade') + 1)
+        } else {
+            localStorage.setItem('drinksMade', '1');
+        }
+        console.log(localStorage.getItem('drinksMade'));
+    });
 }

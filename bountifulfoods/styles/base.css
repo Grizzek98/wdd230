@@ -254,6 +254,79 @@ form {
     order: 3;
     background-color: #823367;
     color: #EDF4F5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form fieldset {
+    margin: 1rem 2rem;
+    border: none;
+    border-left: 2px solid #EDF4F5;
+}
+form legend {
+    font-size: 20px;
+}
+form label {
+    display: block;
+    padding-top: 1rem;
+    text-align: left;
+    font-family: "Noto Sans";
+}
+form input, form select {
+    display: block;
+    padding: .75rem;
+    background-color: #EDF4F5;
+}
+form textarea {
+    display: block;
+    min-width: 219px;
+    min-height: 100px;
+    background-color: #EDF4F5;
+}
+form label input:required {
+    background-color: rgb(255, 177, 177);
+}
+form label input:required:valid {
+    background-color: #EDF4F5;
+}
+form input.submitBtn {
+    background-color: #EDF4F5;
+    font-family: "Playfair Display";
+    font-size: 25px;
+    color: #823367;
+    border-radius: 5px;
+    margin: 1.5rem 0;
+    padding: 1rem 3rem;
+    border: 2px solid #4E546A;
+}
+form input.submitBtn:hover {
+    border: 2px solid #EDF4F5;
+    background-color: #823367;
+    color: #EDF4F5;
+}
+form input.submitBtn:active {
+    transform: scale(0.98);
+    box-shadow: 2px 2px 10px 1px #4E546A;
+}
+.form-result {
+    order: 4;
+    display: none;
+    background-color: #4D9367;
+    width: 100%;
+    color: #EDF4F5;
+    grid-template-columns: 1fr;
+}
+.confirm {
+    border-left: 2px solid #EDF4F5;
+    margin: 1rem 2rem;
+    max-width: 500px;
+    margin-bottom: 1rem;
+    justify-self: center;
+}
+.confirm p {
+    padding: 0 1rem;
+    text-align: left;
 }
 
 /* ------ FOOTER ------ */

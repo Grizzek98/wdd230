@@ -52,16 +52,43 @@
                 to do is take control! And add water, of course.
             </p>
         </div>
-        <form method="get" action="#">
+        <form method="get" action="">
             <h2>Let's Get Mixing</h2>
-            <fieldset>
-                <legend>How Do We Contact You?</legend>
-                <label class="top">First Name<input type="text" name="fname" required></label>
-                <label class="top">Email<input type="email" name="email" required></label>
-                <label class="top">Phone<input type="tel" name="phone" required></label>
-            
+            <fieldset id="fs1">
+                <legend>Order Contact Info</legend>
+                <label>First Name<input type="text" name="fname" required></label>
+                <label>Email<input type="email" name="email" required></label>
+                <label>Phone<input type="tel" name="phone" required></label>
             </fieldset>
+            <fieldset id="fs2">
+                <legend>Fresh Flavors</legend>
+                <label>First Choice<select name="flavor1" id="flavor1"></select></label>
+                <label>Second Choice<select name="flavor2" id="flavor2"></select></label>
+                <label>Third Choice<select name="flavor3" id="flavor3"></select></label>
+                <label>Special Instructions<textarea name="spec-instr"></textarea></label>
+            </fieldset>
+            <input id="time" type="hidden" name="time" value="currenttime">
+            <input class="submitBtn" type="button" value="Make Mix">
         </form>
+        <div></div>
+        <div class="form-result">
+            <h2>Thank You For Your Order</h3>
+            <div class="confirm">
+                <p id="fname-con">First Name: </p>
+                <p id="email-con">Email: </p>
+                <p id="phone-con">Phone: </p>
+                <p id="time-con">Order Date: </p>
+                <p id="instr-con">Special Instructions: </p>
+            </div>
+            <h3>Nutrition Facts About Your Drink Mix</h4>
+            <div class="confirm">
+                <p id="carbs">Carbohydrates: </p>
+                <p id="protein">Protein: </p>
+                <p id="fat">Fat: </p>
+                <p id="sugar">Sugar: </p>
+                <p id="cals">Calories: </p>
+            </div>
+        </div>
     </main>
     
     <footer>
