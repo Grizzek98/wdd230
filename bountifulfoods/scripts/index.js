@@ -48,7 +48,7 @@ images.forEach(image => {
 
 // ------ HOME ------
 
-if (window.location.href.indexOf('index.html') > -1) {
+if (window.location.href.indexOf('') > -1) {
     const temp = document.querySelector('.temp span');
     const condDesc = document.querySelector('.condition-desc span');
     const humidity = document.querySelector('.humidity span');
