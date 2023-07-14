@@ -48,22 +48,12 @@ images.forEach(image => {
 
 // ------ HOME ------
 
-// if (window.location.href.indexOf('') > -1){
-//     console.log('');
-// };
-// if (window.location.href.indexOf('/') > -1){
-//     console.log('/');
-// };
-// if (window.location.href.indexOf('index.html') > -1){
-//     console.log('index.html');
-// };
-// console.log(window.location.href)
-if (window.location.href.indexOf('/') > -1) {
+if (window.location.href.indexOf('index.html') > -1) {
+    console.log('hello world');
     const temp = document.querySelector('.temp span');
     const condDesc = document.querySelector('.condition-desc span');
     const humidity = document.querySelector('.humidity span');
     const weatherIcon = document.querySelector('#weather-icon')
-    // const captionDesc = document.querySelector('figcaption');
 
     const url = 'https://api.openweathermap.org/data/2.5/weather?q=Carlsbad&appid=82b3ab783ff7c95236b8cdc47074b9c8&units=imperial';
     
@@ -206,10 +196,10 @@ if (window.location.href.indexOf('fresh.html') > -1) {
             
         })
         document.querySelector('#carbs').innerHTML = `Carbohydrates: ${totalCarbs.toFixed(1)}`;
-        document.querySelector('#protein').innerHTML = `Carbohydrates: ${totalProtein.toFixed(1)}`;
-        document.querySelector('#fat').innerHTML = `Carbohydrates: ${totalFat.toFixed(1)}`;
-        document.querySelector('#sugar').innerHTML = `Carbohydrates: ${totalSugar.toFixed(1)}`;
-        document.querySelector('#cals').innerHTML = `Carbohydrates: ${totalCals.toFixed(1)}`;
+        document.querySelector('#protein').innerHTML = `Protein: ${totalProtein.toFixed(1)}`;
+        document.querySelector('#fat').innerHTML = `Fat: ${totalFat.toFixed(1)}`;
+        document.querySelector('#sugar').innerHTML = `Sugar: ${totalSugar.toFixed(1)}`;
+        document.querySelector('#cals').innerHTML = `Calories: ${totalCals.toFixed(1)}`;
 
         document.querySelector('.form-result').style.display = 'grid';
 
