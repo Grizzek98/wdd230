@@ -45,12 +45,15 @@ const imgObserver = new IntersectionObserver((entries, imgObserver) => {
 images.forEach(image => {
     imgObserver.observe(image);
 });
-console.log(window.location.href)
+// console.log(window.location.href)
+// if (window.location.href == 'http://127.0.0.1:5500/bountifulfoods/index.html') {
+//     console.log('hellow')
+// }
 
 
 // ------ HOME ------
 
-if (window.location.href.indexOf('https://grizzek98.github.io/wdd230/bountifulfoods/') > -1 || window.location.href.indexOf('https://grizzek98.github.io/wdd230/bountifulfoods/index.html') > -1) {
+if (window.location.href == 'https://grizzek98.github.io/wdd230/bountifulfoods/' || window.location.href == 'https://grizzek98.github.io/wdd230/bountifulfoods/index.html') {
     const temp = document.querySelector('.temp span');
     const condDesc = document.querySelector('.condition-desc span');
     const humidity = document.querySelector('.humidity span');
