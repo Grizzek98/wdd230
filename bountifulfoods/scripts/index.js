@@ -46,7 +46,6 @@ images.forEach(image => {
     imgObserver.observe(image);
 });
 console.log(window.location.href)
-if (window.location.href)
 
 
 // ------ HOME ------
