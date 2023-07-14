@@ -46,11 +46,12 @@ images.forEach(image => {
     imgObserver.observe(image);
 });
 console.log(window.location.href)
+if (window.location.href)
 
 
 // ------ HOME ------
 
-if (window.location.href.indexOf('index.html') > -1) {
+if (window.location.href.indexOf('https://grizzek98.github.io/wdd230/bountifulfoods/') > -1 || window.location.href.indexOf('https://grizzek98.github.io/wdd230/bountifulfoods/index.html') > -1) {
     const temp = document.querySelector('.temp span');
     const condDesc = document.querySelector('.condition-desc span');
     const humidity = document.querySelector('.humidity span');
@@ -210,6 +211,6 @@ if (window.location.href.indexOf('fresh.html') > -1) {
         } else {
             localStorage.setItem('drinksMade', '1');
         }
-        console.log(localStorage.getItem('drinksMade'));
+        // console.log(localStorage.getItem('drinksMade'));
     });
 }
