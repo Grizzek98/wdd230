@@ -45,11 +45,12 @@ const imgObserver = new IntersectionObserver((entries, imgObserver) => {
 images.forEach(image => {
     imgObserver.observe(image);
 });
+console.log(window.location.href)
+
 
 // ------ HOME ------
 
 if (window.location.href.indexOf('index.html') > -1) {
-    console.log('hello world');
     const temp = document.querySelector('.temp span');
     const condDesc = document.querySelector('.condition-desc span');
     const humidity = document.querySelector('.humidity span');
